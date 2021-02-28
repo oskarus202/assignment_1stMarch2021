@@ -1,0 +1,34 @@
+	Automation: done with Cypress. 
+Here is the instruction how to proceed with running automated tests. 
+Make sure that Node.js is installed on your local machine. 
+Recommended IDE is Visual Studio Code. 
+Create a folder in your local hard drive – for example CypressAssignment.  Right click on that folder and select Open in Code. 
+As a result Visual Studio Code should open that folder. If the view for terminal is not opened by the default – please from the upper menu click on Terminal – New Terminal. From the lower view of Visual Studio Code click on Terminal and make sure it points to the location you have opened. If it doesn’t, move up (one folder higher) via writing “cd ..” (omit quotation marks, please) into the terminal and pressing Enter key or by writing “cd [here goes your full path to the folder for example: D:\materials\CypressAssignment]”. You can list the elements of the currently accessed folder via the command “ls”. Once you are in the right folder via terminal (and Node.js is already installed on your machine) type in “npm init” and click on Enter. You will be prompted a few questions like the author, keywords and so on. Whatever you select here is of minor importance, but just to be precise you will be asked about: 
+package name – confirm the default by pressing Enter, 
+version 1.0.0 – confirm as well,
+description – leave empty, 
+entry point:  (index.js) – again just confirm; 
+test command – leave empty, 
+git repository – leave empty as well, 
+keywords – leave empty, 
+author – it is actually me but you can write your name, 
+license (ISC) – leave as it is, 
+Is this Ok?  - type in ‘yes’ and press Enter. 
+Now while being in the same folder type in: npm install cypress – it should take a while for the package being downloaded and installed. When installation is finished you should see message like: + cypress@6.2.1
+added 217 packages in 37.284s  (the version and number of package as well as time that your computer needed required may vary but the structure of the message should be the same). 
+Now from the folder which was chosen for the installation find and open package.json file and make sure your script section looks exactly like this (it will be required for running Cypress Test Runner):
+
+ "scripts": {
+    "cypress:open": "cypress open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+
+Type in “npm run cypress:open” in your terminal and press Enter. After a few seconds depending on your machine’s capabilities you should see a new window opened (that is the CypressTestRunner) and a new folder in your main folder chosen for installation (named: Cypress) should appear.   
+Make sure you download file: TaskForCompanyVer1.7final.js (placed in the linked repo) and put in into: [FolderWherePackageWasInstalled \cypress\integration\examples]. 
+Now from the view of your Cypress Test Runner make sure you expand Integration Tests folder and from there a file: TaskForCompanyVer1.7final.js should be double clicked. 
+And now Cypress should give you a view of the automated actions on the application. 
+Any questions – please let me know (preferably via email).
+
+
+ 
