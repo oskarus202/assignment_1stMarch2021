@@ -41,10 +41,12 @@ describe('Description to be added', () => {
         cy.contains('Log in').should('exist');
 
         //filling in the login
-        cy.get('input[id="user_email"]').type('admin@tjekvik.com');
+        cy.get('input[id="user_email"]').type('**********');
+        // login erased due to safety reasons
 
         //filling in the password 
-        cy.get('input[id="user_password"]').type('Password1');
+        cy.get('input[id="user_password"]').type('*****');
+        // password changed already for security reasons - 21.03.2021
 
         //clicking on Sign In button
         cy.get('input[type="submit"]').click();
